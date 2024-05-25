@@ -808,7 +808,7 @@ def mqtt_subst_topic(s, values, expand=True):
 
 def mqtt_setup_client(host, port, client_id, available_topic, command_topic, username="", password=""):
     # Connect to MQTT server:
-    mqtt_client = mqtt.Client(client_id)
+    mqtt_client = mqtt.Client(mqtt_client.CallbackAPIVersion.VERSION1, client_id)
     mqtt_client.on_message = mqtt_set_value
     _LOGGER.info(f"Connecting to MQTT host {host} on port {port} ...")
     mqtt_client.will_set(
