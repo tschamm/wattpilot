@@ -649,6 +649,7 @@ properties:
     category: Config
     description: Button allow Current change
     homeAssistant:
+      component: switch
       config:
         entity_category: config
   - key: bam
