@@ -610,6 +610,11 @@ properties:
       - key: awcp_marketprice
         valueRef: marketprice
         jsonType: float
+        homeAssistant:
+          config:
+            device_class: energy
+            unit_of_measurement: "ct/kWh"
+            enabled_by_default: true
   - key: awp
     alias: awattarMaxPrice
     title: Awattar Max Price
