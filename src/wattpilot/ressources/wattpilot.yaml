@@ -600,13 +600,22 @@ properties:
     type: optional<object>
     category: Status
     description: awattar current price
+    homeAssistant:
+      config:
+        enabled_by_default: false
     childProps:
       - key: awcp_start
         valueRef: start
         jsonType: integer
+        homeAssistant:
+          config:
+            enabled_by_default: false
       - key: awcp_end
         valueRef: end
         jsonType: integer
+        homeAssistant:
+          config:
+            enabled_by_default: false
       - key: awcp_marketprice
         valueRef: marketprice
         jsonType: float
